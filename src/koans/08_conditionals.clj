@@ -15,11 +15,11 @@
           :b))
 
   "Some of them leave you no alternative"
-  (= (if (> 4 3)
-          []))
+  (= [] (if (> 4 3)
+           []))
 
   "And in such a situation you may have nothing"
-  (= (if (nil? 0)
+  (= nil (if (nil? 0)
           [:a :b :c]))
 
   "In others your alternative may be interesting"

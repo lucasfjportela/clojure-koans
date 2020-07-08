@@ -33,13 +33,13 @@
   (= '(:b :c :d :e) (pop '(:a :b :c :d :e)))
 
   "But watch out if you try to pop nothing"
-  (= (try
-          (pop '())
-          (catch IllegalStateException e
-            "No dice!")))
+  (= "No dice!" (try
+                  (pop '())
+                (catch IllegalStateException e
+                  "No dice!")))
 
   "The rest of nothing isn't so strict"
-  (= (try
-          (rest '())
-          (catch IllegalStateException e
-            "No dice!"))))
+  (= '() (try
+           (rest '())
+         (catch IllegalStateException e
+           "No dice!"))))
