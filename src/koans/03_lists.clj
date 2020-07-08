@@ -39,7 +39,7 @@
             "No dice!")))
 
   "The rest of nothing isn't so strict"
-  (= __ (try
+  (=  (try
           (rest '())
           (catch IllegalStateException e
             "No dice!"))))
